@@ -1,0 +1,51 @@
+# Nexa v1: Project Overview 🤖
+
+Nexa is a small Arduino robot built by Harmain and Asfiya. It drives around avoiding obstacles, shows an animated face on a screen, and plays sounds. It was our first big hardware project, and we built it from scratch while learning as we went.
+
+[▶️ Watch the demo on YouTube](PASTE-YOUR-VIDEO-LINK-HERE)
+
+---
+
+## 💡 The idea
+We wanted a robot with personality, not just one that moves. Nexa reacts to its surroundings, shows expressions with animated cyan eyes, and makes sounds. **[EDIT: add why you built it, e.g. for our institute's freshers party]**
+
+## ✨ What Nexa can do
+- **Avoid obstacles:** an ultrasonic sensor mounted on a servo looks left and right, and Nexa turns toward the clearest path
+- **Show expressions:** an animated face with cyan rounded eyes on a TFT display
+- **Play sounds:** audio stored on a microSD card and played through a speaker
+- **[EDIT: add anything else, e.g. Bluetooth control]**
+
+## 🔧 Hardware
+| Part | What it does |
+|------|--------------|
+| Arduino Uno | The brain of the robot |
+| L298N motor driver + DC motors | Drives the wheels |
+| HC-SR04 ultrasonic sensor + SG90 servo | Detects obstacles and scans left and right |
+| TFT display | Shows the animated face |
+| DFPlayer Mini + microSD + speaker | Plays sounds |
+| Chassis, battery packs, power switch | Body and power |
+
+## 🧠 How it works
+1. The ultrasonic sensor measures the distance to whatever is in front of Nexa.
+2. If the path is clear, the motors drive forward.
+3. If something is too close, Nexa stops, the servo turns the sensor to look around, and Nexa turns toward the side with more space.
+4. While this happens, the TFT shows the face and the DFPlayer plays sounds.
+
+**[EDIT: add the distance at which Nexa decides to turn, and anything else about your logic]**
+
+## 🔌 Power setup
+Nexa uses two separate power sources. The motors share a battery with everything else at first, and electrical noise from them made the screen flicker and go white. We fixed it by powering the Arduino, display and audio from a separate 9V battery, and the motors from the main battery pack. All the grounds are still connected together.
+
+## 🧗 Challenges and what we learned
+- **Screen flicker:** motor noise on a shared battery caused it. A separate battery for the electronics fixed it.
+- **Merging working parts:** the obstacle-avoidance code and the face animation each worked alone. Combining them took careful testing. **[EDIT: add what went wrong and how you solved it]**
+- **Wiring many modules:** pin conflicts and loose connections taught us to test one part at a time.
+
+## 📸 Photos
+**[EDIT: add 2 or 3 photos of Nexa. Drag and drop them into the editor and GitHub will insert them.]**
+
+## 🚀 What's next
+**[EDIT: ideas for Nexa v2, for example more expressions, Bluetooth control, or a better chassis]**
+
+## 👩‍💻 Built by
+Harmain and Asfiya. We're beginners and still learning. 📺 [Our YouTube channel](PASTE-YOUR-CHANNEL-LINK-HERE)
